@@ -70,8 +70,7 @@ fi
 echo ""
 echo "Done."
 echo ""
-echo "Run this command to open the MeldingSoftware menu:"
-echo "  MeldingSoftware"
+echo "Launching MeldingSoftware..."
 echo ""
-echo "If the command is not found, close Terminal and open it again."
-echo ""
+
+"$LAUNCHER"
