@@ -48,20 +48,18 @@ update_meldingsoftware() {
   echo "Updating MeldingSoftware..."
   echo ""
 
-  mkdir -p "$SCRIPTS_DIR"
-
   download_script "DeBloater.sh"
-  download_script "FunCommands.sh"
-  download_script "InstalledApps.sh"
-  download_script "LargestFiles.sh"
+  download_script "Fun_Commands.sh"
+  download_script "Installed_Apps.sh"
+  download_script "Largest_Files.sh"
   download_script "Maintenance.sh"
   download_script "Melder.sh"
-  download_script "PrintSpoolerFix.sh"
+  download_script "Print_Spooler_Fix.sh"
   download_script "Recon.sh"
-  download_script "RepairTool.sh"
-  download_script "SystemInfo.sh"
-  download_script "UpdateFix.sh"
-  download_script "Wi-FiInfo.sh"
+  download_script "Repair_Tool.sh"
+  download_script "System_Info.sh"
+  download_script "Update_Fix.sh"
+  download_script "Wi-Fi_Info.sh"
 
   echo ""
   echo "Update complete."
@@ -87,10 +85,6 @@ uninstall_meldingsoftware() {
     echo ""
     echo "MeldingSoftware removed."
     echo ""
-    echo "Note:"
-    echo "The PATH entry for ~/.local/bin may remain in your shell profile."
-    echo "That is safe to leave because other tools may also use ~/.local/bin."
-    echo ""
     echo "Close and reopen Terminal if the command still appears cached."
     echo ""
     exit 0
@@ -108,18 +102,18 @@ while true; do
   echo "Select a script to run:"
   echo ""
   echo "  0) Exit"
-  echo "  1) DeBloater"
-  echo "  2) Fun Commands"
-  echo "  3) Installed Apps"
-  echo "  4) Largest Files"
-  echo "  5) Maintenance"
-  echo "  6) Melder"
-  echo "  7) Print Spooler Fix"
-  echo "  8) Recon"
-  echo "  9) Repair Tool"
-  echo " 10) System Info"
-  echo " 11) Update Fix"
-  echo " 12) Wi-Fi Info"
+  echo " 1) DeBloater"
+  echo " 2) Fun Commands"
+  echo " 3) Installed Apps"
+  echo " 4) Largest Files"
+  echo " 5) Maintenance"
+  echo " 6) Melder"
+  echo " 7) Print Spooler Fix"
+  echo " 8) Recon"
+  echo " 9) Repair Tool"
+  echo "10) System Info"
+  echo "11) Update Fix"
+  echo "12) Wi-Fi Info"
   echo " 13) Update MeldingSoftware"
   echo " 14) Uninstall MeldingSoftware"
   echo ""
@@ -128,17 +122,17 @@ while true; do
   case "$choice" in
     0) clear; exit 0 ;;
     1) run_script "DeBloater.sh" ;;
-    2) run_script "FunCommands.sh" ;;
-    3) run_script "InstalledApps.sh" ;;
-    4) run_script "LargestFiles.sh" ;;
+    2) run_script "Fun_Commands.sh" ;;
+    3) run_script "Installed_Apps.sh" ;;
+    4) run_script "Largest_Files.sh" ;;
     5) run_script "Maintenance.sh" ;;
     6) run_script "Melder.sh" ;;
-    7) run_script "PrintSpoolerFix.sh" ;;
+    7) run_script "Print_Spooler_Fix.sh" ;;
     8) run_script "Recon.sh" ;;
-    9) run_script "RepairTool.sh" ;;
-    10) run_script "SystemInfo.sh" ;;
-    11) run_script "UpdateFix.sh" ;;
-    12) run_script "Wi-FiInfo.sh" ;;
+    9) run_script "Repair_Tool.sh" ;;
+    10) run_script "System_Info.sh" ;;
+    11) run_script "Update_Fix.sh" ;;
+    12) run_script "Wi-Fi_Info.sh" ;;
     13) update_meldingsoftware ;;
     14) uninstall_meldingsoftware ;;
     *) echo "Invalid choice."; sleep 1 ;;

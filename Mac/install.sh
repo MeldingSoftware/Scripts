@@ -34,17 +34,17 @@ download_script() {
 
 # Download Mac scripts
 download_script "DeBloater.sh"
-download_script "FunCommands.sh"
-download_script "InstalledApps.sh"
-download_script "LargestFiles.sh"
+download_script "Fun_Commands.sh"
+download_script "Installed_Apps.sh"
+download_script "Largest_Files.sh"
 download_script "Maintenance.sh"
 download_script "Melder.sh"
-download_script "PrintSpoolerFix.sh"
+download_script "Print_Spooler_Fix.sh"
 download_script "Recon.sh"
-download_script "RepairTool.sh"
-download_script "SystemInfo.sh"
-download_script "UpdateFix.sh"
-download_script "Wi-FiInfo.sh"
+download_script "Repair_Tool.sh"
+download_script "System_Info.sh"
+download_script "Update_Fix.sh"
+download_script "Wi-Fi_Info.sh"
 
 # Download launcher
 echo "Installing launcher command..."
