@@ -64,7 +64,6 @@ After reopening Terminal, type `MeldingSoftware` anytime to load the list.
 - Installed Apps
 - Largest Files
 - Print Spooler Fix
-- Start My Day
 - DeBloater
 - Fun Commands
 - Recon
