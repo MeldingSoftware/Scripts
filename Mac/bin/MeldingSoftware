@@ -5,10 +5,12 @@ TITLE="MeldingSoftware"
 INSTALL_DIR="$HOME/.MeldingSoftware"
 SCRIPTS_DIR="$INSTALL_DIR/scripts"
 BASE_URL="https://raw.githubusercontent.com/MeldingSoftware/Scripts/main/Mac"
+ZIP_NAME="MeldingSoftware_Mac_Scripts.zip"
+ZIP_URL="$BASE_URL/$ZIP_NAME"
 
 pause() {
   echo ""
-  read -r -p "Press Enter to return to the menu..."
+  read -r -p "Press Enter to return to the menu..." _ </dev/tty || true
 }
 
 run_script() {
@@ -33,33 +35,50 @@ run_script() {
   pause
 }
 
-download_script() {
-  local name="$1"
-  local url="$BASE_URL/$name"
-  local dest="$SCRIPTS_DIR/$name"
-
-  echo "Updating $name..."
-  curl -fsSL "$url" -o "$dest"
-  chmod +x "$dest"
-}
-
 update_meldingsoftware() {
   clear
   echo "Updating MeldingSoftware..."
   echo ""
 
-  download_script "DeBloater.sh"
-  download_script "Fun_Commands.sh"
-  download_script "Installed_Apps.sh"
-  download_script "Largest_Files.sh"
-  download_script "Maintenance.sh"
-  download_script "Melder.sh"
-  download_script "Print_Spooler_Fix.sh"
-  download_script "Recon.sh"
-  download_script "Repair_Tool.sh"
-  download_script "System_Info.sh"
-  download_script "Update_Fix.sh"
-  download_script "Wi-Fi_Info.sh"
+  TMP_DIR="$(mktemp -d)"
+  ZIP_PATH="$TMP_DIR/$ZIP_NAME"
+  EXTRACT_DIR="$TMP_DIR/extract"
+
+  cleanup() {
+    rm -rf "$TMP_DIR"
+  }
+  trap cleanup RETURN
+
+  mkdir -p "$EXTRACT_DIR"
+
+  echo "Downloading latest scripts package..."
+  curl -fsSL "$ZIP_URL" -o "$ZIP_PATH"
+
+  echo "Extracting scripts..."
+  /usr/bin/unzip -q "$ZIP_PATH" -d "$EXTRACT_DIR"
+
+  SOURCE_DIR=""
+  if [[ -f "$EXTRACT_DIR/Melder.sh" ]] || [[ -f "$EXTRACT_DIR/DeBloater.sh" ]]; then
+    SOURCE_DIR="$EXTRACT_DIR"
+  else
+    while IFS= read -r dir; do
+      if [[ -f "$dir/Melder.sh" ]] || [[ -f "$dir/DeBloater.sh" ]]; then
+        SOURCE_DIR="$dir"
+        break
+      fi
+    done < <(find "$EXTRACT_DIR" -type d)
+  fi
+
+  if [[ -z "$SOURCE_DIR" ]]; then
+    echo "Could not find scripts inside the ZIP."
+    pause
+    return
+  fi
+
+  rm -rf "$SCRIPTS_DIR"
+  mkdir -p "$SCRIPTS_DIR"
+  find "$SOURCE_DIR" -maxdepth 1 -type f -name "*.sh" -exec cp "{}" "$SCRIPTS_DIR/" \;
+  chmod +x "$SCRIPTS_DIR"/*.sh 2>/dev/null || true
 
   echo ""
   echo "Update complete."
@@ -76,7 +95,7 @@ uninstall_meldingsoftware() {
   echo ""
   echo "It will not remove Homebrew, installed apps, or other files in ~/.local/bin."
   echo ""
-  read -r -p "Type uninstall to continue: " confirm
+  read -r -p "Type uninstall to continue: " confirm </dev/tty || confirm=""
 
   if [[ "$confirm" == "uninstall" ]]; then
     rm -rf "$HOME/.MeldingSoftware"
@@ -102,22 +121,22 @@ while true; do
   echo "Select a script to run:"
   echo ""
   echo "  0) Exit"
-  echo " 1) DeBloater"
-  echo " 2) Fun Commands"
-  echo " 3) Installed Apps"
-  echo " 4) Largest Files"
-  echo " 5) Maintenance"
-  echo " 6) Melder"
-  echo " 7) Print Spooler Fix"
-  echo " 8) Recon"
-  echo " 9) Repair Tool"
-  echo "10) System Info"
-  echo "11) Update Fix"
-  echo "12) Wi-Fi Info"
+  echo "  1) DeBloater"
+  echo "  2) Fun Commands"
+  echo "  3) Installed Apps"
+  echo "  4) Largest Files"
+  echo "  5) Maintenance"
+  echo "  6) Melder"
+  echo "  7) Print Spooler Fix"
+  echo "  8) Recon"
+  echo "  9) Repair Tool"
+  echo " 10) System Info"
+  echo " 11) Update Fix"
+  echo " 12) Wi-Fi Info"
   echo " 13) Update MeldingSoftware"
   echo " 14) Uninstall MeldingSoftware"
   echo ""
-  read -r -p "Enter a number: " choice
+  read -r -p "Enter a number: " choice </dev/tty || choice=""
 
   case "$choice" in
     0) clear; exit 0 ;;
