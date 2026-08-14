@@ -1,0 +1,40 @@
+MAINTENANCE
+
+AUTHOR
+Kevin King
+
+DESCRIPTION
+Automate maintenance and automatically restarts. Creates an HTML file to view system info and maintenance results.
+
+INSTRUCTIONS
+
+Smart App Control (Windows 11) - It's possible this can block the script. If it does, search for Smart App Control in Settings and turn it off.
+
+Antivirus - You may need to temporally disable your Antivirus or create an exception for the Maintenance.ps1. 
+Known Antivirus that can cause issues: Norton and Avast.
+If your Antivirus quarantines the file, you can restore it can it will make an exception. 
+
+Run the Run Me.bat file to start the script. Click Yes when UAC prompts.
+Be prepared for the computer to restart automatically once the script is finished.
+Be sure to save any work before running this script. 
+Task Scheduler will inject chkdsk results, cleanup, and open the HTML file on the Desktop.
+Maintenance and Maintenance.zip folders get deleted if they were created within 24 hours.
+
+TABLE OF CONTENTS
+Disables Sleep Setting
+Optimize Startup (interactive)
+Software Install (interactive)
+Chkdsk 
+DISM And SFC
+Browser Cleanup
+Delete Temp Files and Cache
+Windows Updates
+App Updates
+Optimize Drives
+Create a Restore Point
+Re-enables Sleep Setting
+Restart
+Task Scheduler
+Copy HTML to Desktop and Open
+Delete Maintenance Temp
+Delete Maintenance and Maintenance.zip in Downloads (< 24 hr)
