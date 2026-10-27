@@ -33,7 +33,7 @@ run_script() {
   clear
   echo "Running $script"
   echo "------------------------------------------------------------"
-  bash "$path"
+  "$path"
   pause
 }
 
