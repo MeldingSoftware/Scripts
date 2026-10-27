@@ -45,13 +45,13 @@ echo "Extracting scripts..."
 /usr/bin/unzip -q "$ZIP_PATH" -d "$EXTRACT_DIR"
 
 # The ZIP may contain files directly, or inside a folder.
-# Find the first directory/file set that contains Melder.sh or DeBloater.sh.
+# Find the first directory/file set that contains a known MeldingSoftware script.
 SOURCE_DIR=""
-if [[ -f "$EXTRACT_DIR/Melder.sh" ]] || [[ -f "$EXTRACT_DIR/DeBloater.sh" ]]; then
+if [[ -f "$EXTRACT_DIR/Melder.sh" ]] || [[ -f "$EXTRACT_DIR/DeBloater.sh" ]] || [[ -f "$EXTRACT_DIR/Threat_Inspection.sh" ]]; then
   SOURCE_DIR="$EXTRACT_DIR"
 else
   while IFS= read -r dir; do
-    if [[ -f "$dir/Melder.sh" ]] || [[ -f "$dir/DeBloater.sh" ]]; then
+    if [[ -f "$dir/Melder.sh" ]] || [[ -f "$dir/DeBloater.sh" ]] || [[ -f "$dir/Threat_Inspection.sh" ]]; then
       SOURCE_DIR="$dir"
       break
     fi
@@ -60,7 +60,7 @@ fi
 
 if [[ -z "$SOURCE_DIR" ]]; then
   echo "Could not find scripts inside the ZIP."
-  echo "The ZIP should contain files like Melder.sh, Maintenance.sh, etc."
+  echo "The ZIP should contain files like Melder.sh, Maintenance.sh, Threat_Inspection.sh, etc."
   exit 1
 fi
 
