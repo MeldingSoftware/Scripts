@@ -22,7 +22,6 @@ The ZIP should contain these raw .sh files at the root of the ZIP:
   Maintenance.sh
   Melder.sh
   Print_Spooler_Fix.sh
-  Recon.sh
   Repair_Tool.sh
   System_Info.sh
   Update_Fix.sh
