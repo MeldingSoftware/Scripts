@@ -13,26 +13,26 @@ The Windows section contains PowerShell utilities for PC maintenance, troublesho
 
 ### Windows Tools
 
-- BitLocker Recovery Key
-- DeBloater
-- Fun Commands
-- Group Policy Editor
-- Installed Apps
-- Largest Files
-- Maintenance
-- Media Player
-- Melder
-- Mouse Jiggler
-- Network Fix
-- OneDrive Backup
-- Print Spooler Fix
-- Repair Tool
-- Start My Day
-- System Info
-- Threat Inspection
-- Update Fix
-- Wi-Fi Info
-- Windows Security Fix
+- BitLocker Recovery Key — Ver. TBD
+- DeBloater — Ver. TBD
+- Fun Commands — Ver. TBD
+- Group Policy Editor — Ver. TBD
+- Installed Apps — Ver. TBD
+- Largest Files — Ver. TBD
+- Maintenance — Ver. TBD
+- Media Player — Ver. TBD
+- Melder — Ver. TBD
+- Mouse Jiggler — Ver. TBD
+- Network Fix — Ver. TBD
+- OneDrive Backup — Ver. TBD
+- Print Spooler Fix — Ver. TBD
+- Repair Tool — Ver. TBD
+- Start My Day — Ver. TBD
+- System Info — Ver. TBD
+- Threat Inspection — Ver. TBD
+- Update Fix — Ver. TBD
+- Wi-Fi Info — Ver. TBD
+- Windows Security Fix — Ver. TBD
 
 ### Windows Usage
 
@@ -58,36 +58,18 @@ After reopening Terminal, type `MeldingSoftware` anytime to open the Melding Sof
 
 ### macOS Tools
 
-- DeBloater
-- Fun Commands
-- Installed Apps
-- Largest Files
-- Maintenance
-- Melder
-- Print Spooler Fix
-- Repair Tool
-- System Info
-- Threat Inspection
-- Update Fix
-- Wi-Fi Info
-
----
-
-## Versioning
-
-Melding Software tools use semantic versioning in the form:
-
-```text
-MAJOR.MINOR.PATCH
-```
-
-- **MAJOR** — significant redesigns, major behavior changes, or compatibility changes
-- **MINOR** — new features or meaningful new capabilities that remain compatible with the existing tool
-- **PATCH** — bug fixes, reliability improvements, false-positive corrections, wording/output fixes, and other small compatible changes
-
-Where practical, initial published version numbers are based on the tool's existing development and Git history rather than automatically assigning every established tool version `1.0.0`.
-
-ZIP download names remain stable (for example, `Maintenance.zip`) so website and direct-download links do not need to change when a tool version increases.
+- DeBloater — Ver. TBD
+- Fun Commands — Ver. TBD
+- Installed Apps — Ver. TBD
+- Largest Files — Ver. TBD
+- Maintenance — Ver. TBD
+- Melder — Ver. TBD
+- Print Spooler Fix — Ver. TBD
+- Repair Tool — Ver. TBD
+- System Info — Ver. TBD
+- Threat Inspection — Ver. 1.0.0
+- Update Fix — Ver. TBD
+- Wi-Fi Info — Ver. TBD
 
 ---
 
