@@ -13,26 +13,26 @@ The Windows section contains PowerShell utilities for PC maintenance, troublesho
 
 ### Windows Tools
 
-- BitLocker Recovery Key — Ver. TBD
-- DeBloater — Ver. TBD
-- Fun Commands — Ver. TBD
-- Group Policy Editor — Ver. TBD
-- Installed Apps — Ver. TBD
-- Largest Files — Ver. TBD
-- Maintenance — Ver. TBD
-- Media Player — Ver. TBD
-- Melder — Ver. TBD
-- Mouse Jiggler — Ver. TBD
-- Network Fix — Ver. TBD
-- OneDrive Backup — Ver. TBD
-- Print Spooler Fix — Ver. TBD
-- Repair Tool — Ver. TBD
-- Start My Day — Ver. TBD
-- System Info — Ver. TBD
-- Threat Inspection — Ver. TBD
-- Update Fix — Ver. TBD
-- Wi-Fi Info — Ver. TBD
-- Windows Security Fix — Ver. TBD
+- BitLocker Recovery Key — Ver. 1.0.1
+- DeBloater — Ver. 2.1.1
+- Fun Commands — Ver. 1.0.1
+- Group Policy Editor — Ver. 1.0.1
+- Installed Apps — Ver. 1.1.0
+- Largest Files — Ver. 1.1.0
+- Maintenance — Ver. 2.5.1
+- Media Player — Ver. 1.0.0
+- Melder — Ver. 2.3.0
+- Mouse Jiggler — Ver. 1.0.0
+- Network Fix — Ver. 1.2.0
+- OneDrive Backup — Ver. 1.3.0
+- Print Spooler Fix — Ver. 1.0.0
+- Repair Tool — Ver. 1.1.0
+- Start My Day — Ver. 1.6.0
+- System Info — Ver. 1.1.0
+- Threat Inspection — Ver. 1.30.0
+- Update Fix — Ver. 1.1.0
+- Wi-Fi Info — Ver. 1.0.0
+- Windows Security Fix — Ver. 1.1.0
 
 ### Windows Usage
 
@@ -58,18 +58,18 @@ After reopening Terminal, type `MeldingSoftware` anytime to open the Melding Sof
 
 ### macOS Tools
 
-- DeBloater — Ver. TBD
-- Fun Commands — Ver. TBD
-- Installed Apps — Ver. TBD
-- Largest Files — Ver. TBD
-- Maintenance — Ver. TBD
-- Melder — Ver. TBD
-- Print Spooler Fix — Ver. TBD
-- Repair Tool — Ver. TBD
-- System Info — Ver. TBD
+- DeBloater — Ver. 1.1.0
+- Fun Commands — Ver. 1.1.0
+- Installed Apps — Ver. 1.0.0
+- Largest Files — Ver. 1.1.0
+- Maintenance — Ver. 1.2.0
+- Melder — Ver. 2.2.1
+- Print Spooler Fix — Ver. 1.0.0
+- Repair Tool — Ver. 1.1.0
+- System Info — Ver. 1.1.0
 - Threat Inspection — Ver. 1.0.0
-- Update Fix — Ver. TBD
-- Wi-Fi Info — Ver. TBD
+- Update Fix — Ver. 1.1.0
+- Wi-Fi Info — Ver. 1.0.0
 
 ---
 
