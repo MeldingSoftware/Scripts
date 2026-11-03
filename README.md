@@ -29,7 +29,6 @@ The Windows section contains PowerShell scripts designed to help with PC mainten
 - Network Fix
 - DeBloater
 - Fun Commands
-- Recon
 - Melder
 
 ### Windows Usage
