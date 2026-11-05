@@ -13,26 +13,28 @@ The Windows section contains PowerShell utilities for PC maintenance, troublesho
 
 ### Windows Tools
 
-- BitLocker Recovery Key — Ver. 1.0.1
-- DeBloater — Ver. 2.1.1
-- Fun Commands — Ver. 1.0.1
-- Group Policy Editor — Ver. 1.0.1
-- Installed Apps — Ver. 1.1.0
-- Largest Files — Ver. 1.1.0
-- Maintenance — Ver. 2.5.1
-- Media Player — Ver. 1.0.0
-- Melder — Ver. 2.3.0
-- Mouse Jiggler — Ver. 1.0.0
-- Network Fix — Ver. 1.2.0
-- OneDrive Backup — Ver. 1.3.0
-- Print Spooler Fix — Ver. 1.0.0
-- Repair Tool — Ver. 1.1.0
-- Start My Day — Ver. 1.6.0
-- System Info — Ver. 1.1.0
-- Threat Inspection — Ver. 1.38.0
-- Update Fix — Ver. 1.1.0
-- Wi-Fi Info — Ver. 1.0.0
-- Windows Security Fix — Ver. 1.1.0
+| Tool | Version |
+|:--|:--:|
+| BitLocker Recovery Key | `1.0.1` |
+| DeBloater | `2.1.1` |
+| Fun Commands | `1.0.1` |
+| Group Policy Editor | `1.0.1` |
+| Installed Apps | `1.1.0` |
+| Largest Files | `1.1.0` |
+| Maintenance | `2.5.1` |
+| Media Player | `1.0.0` |
+| Melder | `2.3.0` |
+| Mouse Jiggler | `1.0.0` |
+| Network Fix | `1.2.0` |
+| OneDrive Backup | `1.3.0` |
+| Print Spooler Fix | `1.0.0` |
+| Repair Tool | `1.1.0` |
+| Start My Day | `1.6.0` |
+| System Info | `1.1.0` |
+| Threat Inspection | `1.38.0` |
+| Update Fix | `1.1.0` |
+| Wi-Fi Info | `1.0.0` |
+| Windows Security Fix | `1.1.0` |
 
 ### Windows Usage
 
@@ -58,18 +60,20 @@ After reopening Terminal, type `MeldingSoftware` anytime to open the Melding Sof
 
 ### macOS Tools
 
-- DeBloater — Ver. 1.1.0
-- Fun Commands — Ver. 1.1.0
-- Installed Apps — Ver. 1.0.0
-- Largest Files — Ver. 1.1.0
-- Maintenance — Ver. 1.2.0
-- Melder — Ver. 2.2.1
-- Print Spooler Fix — Ver. 1.0.0
-- Repair Tool — Ver. 1.1.0
-- System Info — Ver. 1.1.0
-- Threat Inspection — Ver. 1.0.0
-- Update Fix — Ver. 1.1.0
-- Wi-Fi Info — Ver. 1.0.0
+| Tool | Version |
+|:--|:--:|
+| DeBloater | `1.1.0` |
+| Fun Commands | `1.1.0` |
+| Installed Apps | `1.0.0` |
+| Largest Files | `1.1.0` |
+| Maintenance | `1.2.0` |
+| Melder | `2.2.1` |
+| Print Spooler Fix | `1.0.0` |
+| Repair Tool | `1.1.0` |
+| System Info | `1.1.0` |
+| Threat Inspection | `1.0.0` |
+| Update Fix | `1.1.0` |
+| Wi-Fi Info | `1.0.0` |
 
 ---
 
