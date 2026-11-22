@@ -31,8 +31,12 @@ Getting started
 3. Choose Standard Scan (default) or Deep Scan when prompted.
 4. Review the generated HTML report; it opens automatically by default.
 
-Run Me.bat starts an elevated Windows PowerShell 5.1 console. It leaves
-the window open after the inspection so results and errors remain visible.
+Run Me.bat launches an elevated, maximized Windows PowerShell 5.1 window.
+The short-lived batch launcher exits after handing off the scan. The
+PowerShell window closes when the inspection finishes, including when
+the HTML report is opened. A brief initial CMD window is inherent to
+starting a .bat file; it should not remain open. Launch errors may still
+be shown by Windows if UAC is declined or PowerShell cannot start.
 The launcher is optional; the script can also be run directly from an
 already elevated Windows PowerShell session:
 
