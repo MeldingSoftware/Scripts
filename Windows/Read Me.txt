@@ -1,0 +1,90 @@
+Threat Inspection v2.4
+======================
+
+Threat Inspection is a read-only Windows 10/11 security inspection utility.
+It reviews remote-access software, installed programs and startup entries,
+persistence and Autoruns, scheduled tasks, services, drivers, processes,
+recent suspicious files, browser settings, network configuration, and
+Windows Security / Microsoft Defender status.
+
+The HTML report classifies findings as:
+  Good    - expected or healthy evidence
+  Info    - informational observation
+  Review  - item that warrants manual verification
+  Warning - stronger concern requiring attention
+
+A finding is not a definitive malware verdict. Legitimate software can
+appear under Review or Warning. No clean result proves a system is malware-free.
+
+Requirements
+------------
+- Windows 10 or Windows 11
+- Windows PowerShell 5.1
+- Administrator privileges
+- Internet access only if you allow retrieval of Microsoft Autorunsc
+  when it is not already installed/available
+
+Getting started
+---------------
+1. Keep Run Me.bat and ThreatInspection.ps1 in the same folder.
+2. Double-click Run Me.bat and approve the Windows UAC prompt.
+3. Choose Standard Scan (default) or Deep Scan when prompted.
+4. Review the generated HTML report; it opens automatically by default.
+
+Run Me.bat starts an elevated Windows PowerShell 5.1 console. It leaves
+the window open after the inspection so results and errors remain visible.
+The launcher is optional; the script can also be run directly from an
+already elevated Windows PowerShell session:
+
+  .\ThreatInspection.ps1
+
+Options
+-------
+  -RecentDays 30          Recent app/file review period (1-365 days)
+  -DeepScan               Scan fixed drives more broadly (depth up to 64)
+  -NoScanPrompt           Use Standard Scan without prompting
+  -NoOpenReport           Generate the report without opening it
+  -SkipAutorunsDownload   Do not download missing Microsoft Autorunsc
+  -NoReportLinks          Do not create/update the report URL handler
+  -UnregisterReportLinks  Remove the script-owned report URL handler
+
+Example (already elevated Windows PowerShell 5.1):
+
+  .\ThreatInspection.ps1 -NoScanPrompt -NoOpenReport -SkipAutorunsDownload
+
+Important behavior
+------------------
+The inspection does not delete files, quarantine detections, uninstall
+programs, change Defender settings, or upload inspected files/hashes.
+For clickable report links, it may register a per-user
+threatinspection:// handler under HKCU and place a hidden helper beside
+the script (or in Desktop\Threat Inspection when run elsewhere).
+Use -NoReportLinks if you do not want that registration.
+
+If Autorunsc is absent and downloading is allowed, the script may fetch
+it from Microsoft's Sysinternals download site, require a valid
+Microsoft digital signature before running it, and remove its temporary
+copy after inspection.
+
+Deep Scan can take substantially longer than Standard Scan. Access
+limitations and browser-profile read failures are reported; they do not
+automatically imply a threat.
+
+Development and regression checks
+---------------------------------
+ThreatInspection_v2.4_Tests.ps1 is an offline regression harness. Run it
+from Windows PowerShell 5.1:
+
+  .\ThreatInspection_v2.4_Tests.ps1
+
+It parses the script and checks selected false-positive, watchlist,
+execution-chain, Defender-history, and notification cases without
+running a live inspection. Passing regression tests do not replace
+testing a live Standard Scan on Windows 10/11.
+
+Repository
+----------
+https://github.com/MeldingSoftware/Scripts/tree/main/Windows
+
+The existing Threat Inspection.zip is a separate distribution artifact.
+Editing the loose files in GitHub does not automatically rebuild that ZIP.
