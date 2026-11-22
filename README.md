@@ -31,7 +31,7 @@ The Windows section contains PowerShell utilities for PC maintenance, troublesho
 | Repair Tool | `1.1.0` |
 | Start My Day | `1.6.0` |
 | System Info | `1.1.0` |
-| Threat Inspection | `1.38.0` |
+| Threat Inspection | `2.4.0` |
 | Update Fix | `1.1.0` |
 | Wi-Fi Info | `1.0.0` |
 | Windows Security Fix | `1.1.0` |
